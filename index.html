@@ -2,183 +2,177 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DEV’S REDDY – Official Channel</title>
+<title>DEV’S REDDY – Official Telegram</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 *{
-  box-sizing:border-box;
-  font-family:Arial,Helvetica,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-  margin:0;
-  min-height:100vh;
-  background:linear-gradient(160deg,#08172c,#040b18);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
+min-height:100vh;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+color:#fff;
+overflow-x:hidden;
 }
 
-/* Card */
-.card{
-  width:92%;
-  max-width:420px;
-  background:linear-gradient(180deg,#0e223f,#08182f);
-  padding:26px 22px 24px;
-  border-radius:22px;
-  text-align:center;
-  box-shadow:0 0 40px rgba(0,160,255,.25);
+/* background light lines */
+.bg-lines span{
+position:fixed;
+top:-50%;
+width:2px;
+height:200%;
+background:linear-gradient(transparent,rgba(255,255,255,.2),transparent);
+animation:move 6s linear infinite;
 }
 
-/* DP upload */
-.dp-box{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  margin:0 auto 12px;
-  border:3px dashed #5bbcff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#8ecbff;
-  cursor:pointer;
-  position:relative;
-  animation:dpPulse 1.5s infinite;
-  overflow:hidden;
+.bg-lines span:nth-child(1){left:15%;animation-delay:0s;}
+.bg-lines span:nth-child(2){left:45%;animation-delay:2s;}
+.bg-lines span:nth-child(3){left:70%;animation-delay:4s;}
+
+@keyframes move{
+0%{transform:translateY(0);}
+100%{transform:translateY(100px);}
 }
 
-.dp-box img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:none;
+.main{
+width:100%;
+max-width:420px;
+padding:25px 18px 40px;
+text-align:center;
+position:relative;
+z-index:5;
 }
 
-@keyframes dpPulse{
-  0%{box-shadow:0 0 0 0 rgba(0,170,255,.6);}
-  70%{box-shadow:0 0 0 18px rgba(0,170,255,0);}
-  100%{box-shadow:0 0 0 0 rgba(0,170,255,0);}
+/* top logo */
+.logo-box{
+width:150px;
+height:150px;
+margin:0 auto 10px;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 0 40px rgba(160,80,255,.6);
 }
 
-h1{
-  margin:10px 0 6px;
-  font-size:26px;
-  letter-spacing:.5px;
+.logo-box img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* heading */
+.title{
+margin-top:10px;
+font-size:32px;
+letter-spacing:2px;
+color:#ffd77a;
+text-shadow:0 0 25px #ffd77a;
 }
 
 .sub{
-  color:#b7d9ff;
-  font-size:14px;
-  margin-bottom:14px;
+margin-top:10px;
+font-size:15px;
+color:#ffcc66;
+letter-spacing:1px;
 }
 
-ul{
-  list-style:none;
-  padding:0;
-  margin:0 0 20px;
-  text-align:left;
-}
-
-ul li{
-  margin:8px 0;
-  font-size:15px;
-  color:#e9f4ff;
-}
-
-ul li::before{
-  content:"✅";
-  margin-right:8px;
-}
-
-/* Button */
+/* join button */
 .join-btn{
-  display:block;
-  width:100%;
-  text-decoration:none;
-  padding:16px 10px;
-  border-radius:14px;
-  background:linear-gradient(90deg,#1fb6ff,#007cff);
-  color:white;
-  font-size:18px;
-  font-weight:bold;
-  box-shadow:0 0 25px rgba(0,140,255,.6);
-  animation:blinkBtn 1s infinite;
+margin:22px auto 28px;
+display:inline-block;
+padding:15px 28px;
+border-radius:40px;
+background:linear-gradient(90deg,#ffe08a,#f7b733);
+color:#000;
+font-weight:bold;
+font-size:18px;
+text-decoration:none;
+box-shadow:0 0 30px #f7c44b;
+animation:pulse 1s infinite;
 }
 
-@keyframes blinkBtn{
-  0%{transform:scale(1);box-shadow:0 0 10px #1fb6ff;}
-  50%{transform:scale(1.07);box-shadow:0 0 35px #1fb6ff;}
-  100%{transform:scale(1);box-shadow:0 0 10px #1fb6ff;}
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);box-shadow:0 0 50px #ffd77a;}
+100%{transform:scale(1);}
+}
+
+/* info card */
+.card{
+background:rgba(255,255,255,.08);
+border-radius:22px;
+padding:22px 18px;
+backdrop-filter:blur(8px);
+box-shadow:0 0 30px rgba(255,255,255,.1);
+}
+
+.card p{
+margin:12px 0;
+font-size:16px;
+letter-spacing:.4px;
+}
+
+.card span{
+color:#ffd77a;
 }
 
 .footer{
-  margin-top:12px;
-  font-size:12px;
-  color:#9fc7ff;
-}
-
-input[type=file]{
-  display:none;
+margin-top:22px;
+font-size:12px;
+color:#aaa;
 }
 </style>
 </head>
-
 <body>
 
-<div class="card">
+<div class="bg-lines">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
-  <label class="dp-box" id="dpBox">
-    <span id="dpText">Upload DP</span>
-    <img id="dpImg">
-    <input type="file" id="dpInput" accept="image/*">
-  </label>
+<div class="main">
 
-  <h1>DEV’S REDDY 🔥</h1>
-  <div class="sub">
-    Official private Telegram channel
+  <!-- LOGO / DP -->
+  <div class="logo-box">
+    <!-- apni image ka naam yaha rakho -->
+    <img src="logo.png" alt="DEV'S REDDY">
   </div>
 
-  <ul>
-    <li>Fast & safe updates</li>
-    <li>High quality private content</li>
-    <li>Daily active community</li>
-    <li>No spam – only real value</li>
-    <li>100% free to join</li>
-  </ul>
+  <div class="title">DEV’S REDDY</div>
 
-  <!-- 👉 YOUR TELEGRAM LINK -->
-  <a class="join-btn"
-     href="https://t.me/+Ku1y4JJKhaw5NGQ1"
-     target="_blank">
-     Join Telegram Channel Now
+  <div class="sub">
+    INDIA’S PREMIUM PRIVATE TELEGRAM CHANNEL 🔥
+  </div>
+
+  <a class="join-btn" href="https://t.me/+Ku1y4JJKhaw5NGQ1" target="_blank">
+    🚀 JOIN TELEGRAM FREE
   </a>
+
+  <div class="card">
+
+    <p>🔥 <span>High accuracy daily predictions</span></p>
+
+    <p>✨ <span>Fast updates & premium analysis</span></p>
+
+    <p>✨ <span>Free signals for community members</span></p>
+
+    <p>✨ <span>Personal guidance & support</span></p>
+
+  </div>
 
   <div class="footer">
     © 2025 DEV’S REDDY • Telegram Community
   </div>
 
 </div>
-
-<script>
-const input = document.getElementById("dpInput");
-const img   = document.getElementById("dpImg");
-const text  = document.getElementById("dpText");
-
-input.addEventListener("change", function(){
-  const file = this.files[0];
-  if(!file) return;
-
-  const reader = new FileReader();
-  reader.onload = function(e){
-    img.src = e.target.result;
-    img.style.display="block";
-    text.style.display="none";
-  }
-  reader.readAsDataURL(file);
-});
-</script>
 
 </body>
 </html>
