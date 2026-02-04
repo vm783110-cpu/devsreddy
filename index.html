@@ -1,344 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trade With Munaf - Official</title>
+<meta charset="UTF-8">
+<title>DEV’S REDDY – Official Channel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1551397499421834');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1551397499421834&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+<style>
+*{
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+body{
+  margin:0;
+  min-height:100vh;
+  background:linear-gradient(160deg,#08172c,#040b18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+}
 
-    body{
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:18px;
-      color:#fff;
-      background:#0b0f14;
-      overflow-x:hidden;
-    }
+/* Card */
+.card{
+  width:92%;
+  max-width:420px;
+  background:linear-gradient(180deg,#0e223f,#08182f);
+  padding:26px 22px 24px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(0,160,255,.25);
+}
 
-    body::before{
-      content:"";
-      position:fixed;
-      inset:0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(0, 140, 255, 0.12), transparent 40%),
-        radial-gradient(circle at 80% 30%, rgba(0, 255, 180, 0.10), transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(255, 200, 0, 0.10), transparent 40%),
-        linear-gradient(135deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-      background-size: auto, auto, auto, 40px 40px, 40px 40px;
-      opacity:0.9;
-      z-index:-2;
-    }
+/* DP upload */
+.dp-box{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  margin:0 auto 12px;
+  border:3px dashed #5bbcff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#8ecbff;
+  cursor:pointer;
+  position:relative;
+  animation:dpPulse 1.5s infinite;
+  overflow:hidden;
+}
 
-    .card{
-      width:100%;
-      max-width:420px;
-      background:rgba(20,20,20,0.88);
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:22px;
-      padding:22px 18px 18px;
-      box-shadow:0 10px 40px rgba(0,0,0,0.55);
-      backdrop-filter: blur(12px);
-      text-align:center;
-      position:relative;
-    }
+.dp-box img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:none;
+}
 
-    .avatarWrap{
-      width:120px;
-      height:120px;
-      margin:0 auto 14px;
-      border-radius:50%;
-      padding:4px;
-      background:linear-gradient(135deg,#ffcc00,#ff9900);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
+@keyframes dpPulse{
+  0%{box-shadow:0 0 0 0 rgba(0,170,255,.6);}
+  70%{box-shadow:0 0 0 18px rgba(0,170,255,0);}
+  100%{box-shadow:0 0 0 0 rgba(0,170,255,0);}
+}
 
-    .avatar{
-      width:100%;
-      height:100%;
-      border-radius:50%;
-      object-fit:cover;
-      border:2px solid rgba(0,0,0,0.6);
-      background:#111;
-    }
+h1{
+  margin:10px 0 6px;
+  font-size:26px;
+  letter-spacing:.5px;
+}
 
-    .title{
-      font-size:38px;
-      font-weight:800;
-      color:#ffcc00;
-      line-height:1.05;
-      margin-top:6px;
-      text-transform:capitalize;
-      text-shadow:0 2px 12px rgba(0,0,0,0.6);
-    }
+.sub{
+  color:#b7d9ff;
+  font-size:14px;
+  margin-bottom:14px;
+}
 
-    .subtitle{
-      margin:10px auto 14px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      font-size:16px;
-      opacity:0.92;
-    }
+ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 20px;
+  text-align:left;
+}
 
-    .pills{
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      margin:8px 0 14px;
-      flex-wrap:wrap;
-    }
+ul li{
+  margin:8px 0;
+  font-size:15px;
+  color:#e9f4ff;
+}
 
-    .pill{
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
-      padding:10px 14px;
-      border-radius:14px;
-      font-weight:700;
-      font-size:15px;
-      min-width:140px;
-    }
+ul li::before{
+  content:"✅";
+  margin-right:8px;
+}
 
-    /* Timer Box */
-    .timerBox{
-      margin:12px 0 16px;
-      padding:12px 14px;
-      border-radius:16px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
-      font-size:15px;
-      font-weight:700;
-      line-height:1.4;
-    }
-    .timerBox span{
-      color:#00d1ff;
-      font-weight:900;
-      font-size:18px;
-    }
+/* Button */
+.join-btn{
+  display:block;
+  width:100%;
+  text-decoration:none;
+  padding:16px 10px;
+  border-radius:14px;
+  background:linear-gradient(90deg,#1fb6ff,#007cff);
+  color:white;
+  font-size:18px;
+  font-weight:bold;
+  box-shadow:0 0 25px rgba(0,140,255,.6);
+  animation:blinkBtn 1s infinite;
+}
 
-    /* Telegram Button - ORIGINAL STYLE */
-    .tgBtn{
-      width:100%;
-      display:flex;
-      justify-content:center;
-      margin:10px 0 18px;
-    }
+@keyframes blinkBtn{
+  0%{transform:scale(1);box-shadow:0 0 10px #1fb6ff;}
+  50%{transform:scale(1.07);box-shadow:0 0 35px #1fb6ff;}
+  100%{transform:scale(1);box-shadow:0 0 10px #1fb6ff;}
+}
 
-    .tgBtn button{
-      width:100%;
-      border:none;
-      cursor:pointer;
-      padding:16px 16px;
-      border-radius:16px;
-      font-size:20px;
-      font-weight:900;
-      color:#fff;
-      background:#2AABEE; /* Telegram official */
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      box-shadow:0 0 0 rgba(42,171,238,0.0);
-      animation: hardBlink 0.55s infinite alternate, pulseGlow 0.8s infinite;
-    }
+.footer{
+  margin-top:12px;
+  font-size:12px;
+  color:#9fc7ff;
+}
 
-    .tgBtn button:active{
-      transform:scale(0.98);
-    }
-
-    .tgIcon{
-      width:26px;
-      height:26px;
-      display:inline-block;
-    }
-
-    @keyframes hardBlink{
-      0%{filter:brightness(1);opacity:1;}
-      100%{filter:brightness(1.7);opacity:0.7;}
-    }
-
-    @keyframes pulseGlow{
-      0%{box-shadow:0 0 0px rgba(42,171,238,0.0);}
-      50%{box-shadow:0 0 28px rgba(42,171,238,0.65);}
-      100%{box-shadow:0 0 0px rgba(42,171,238,0.0);}
-    }
-
-    .features{
-      margin-top:10px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-
-    .feature{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      padding:16px 14px;
-      border-radius:16px;
-      background:rgba(255,255,255,0.06);
-      border:1px solid rgba(255,255,255,0.10);
-      font-size:17px;
-      font-weight:700;
-      text-align:left;
-    }
-
-    .ok{
-      width:26px;
-      height:26px;
-      border-radius:50%;
-      background:#00ff99;
-      color:#001b10;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:900;
-      font-size:16px;
-      flex-shrink:0;
-      box-shadow:0 0 18px rgba(0,255,153,0.35);
-    }
-
-    .note{
-      margin-top:12px;
-      font-size:13px;
-      opacity:0.75;
-    }
-
-    .footerText{
-      margin-top:16px;
-      font-size:12px;
-      opacity:0.7;
-      line-height:1.4;
-    }
-  </style>
+input[type=file]{
+  display:none;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="card">
+<div class="card">
 
-    <div class="avatarWrap">
-      <img class="avatar" src="profile.jpg" alt="Trade With Munaf" />
-    </div>
+  <label class="dp-box" id="dpBox">
+    <span id="dpText">Upload DP</span>
+    <img id="dpImg">
+    <input type="file" id="dpInput" accept="image/*">
+  </label>
 
-    <div class="title">
-      Trade With<br/>Munaf™️
-    </div>
-
-    <div class="subtitle">
-      <span>✅</span>
-      <span>Trusted by thousands of learners</span>
-    </div>
-
-    <div class="pills">
-      <div class="pill">24/7 Updates</div>
-      <div class="pill">Free to Join</div>
-    </div>
-
-    <!-- 10 sec timer -->
-    <div class="timerBox">
-      Auto joining in <span id="timer">10</span> seconds...<br/>
-      If not opened, click the button below 👇
-    </div>
-
-    <!-- Telegram Button -->
-    <div class="tgBtn">
-      <button id="joinBtn" type="button">
-        <svg class="tgIcon" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="120" cy="120" r="120" fill="white" opacity="0.15"/>
-          <path d="M200.5 63.4 171.8 196c-2.2 9.4-8.2 11.7-16.6 7.3l-46-33.9-22.2 21.4c-2.5 2.5-4.6 4.6-9.4 4.6l3.4-48.6 88.5-79.9c3.9-3.4-.9-5.3-6-1.9l-109.4 68.9-47.1-14.7c-10.2-3.2-10.4-10.2 2.1-15.1l184.1-71c8.5-3.1 15.9 2.1 13.1 15.3z"
-                fill="white"/>
-        </svg>
-        Join Telegram
-      </button>
-    </div>
-
-    <div class="features">
-      <div class="feature">
-        <div class="ok">✓</div>
-        <div>Market Insights & Discussions</div>
-      </div>
-
-      <div class="feature">
-        <div class="ok">✓</div>
-        <div>Learn with Experts</div>
-      </div>
-
-      <div class="feature">
-        <div class="ok">✓</div>
-        <div>Practical Strategies</div>
-      </div>
-    </div>
-
-    <div class="note">
-      ⚠️ Note: Only serious learners join the Telegram channel.
-    </div>
-
-    <div class="footerText">
-      By joining, you agree to be contacted for educational updates.
-    </div>
-
+  <h1>DEV’S REDDY 🔥</h1>
+  <div class="sub">
+    Official private Telegram channel
   </div>
 
-  <script>
-    const TG_LINK = "https://t.me/+PMq4xxG9gpkwOWI1";
+  <ul>
+    <li>Fast & safe updates</li>
+    <li>High quality private content</li>
+    <li>Daily active community</li>
+    <li>No spam – only real value</li>
+    <li>100% free to join</li>
+  </ul>
 
-    // Lead track + open telegram
-    function openTelegramWithLead(){
-      try{
-        if(typeof fbq === "function"){
-          fbq('track', 'Lead'); // ✅ Lead event
-        }
-      }catch(e){}
+  <!-- 👉 YOUR TELEGRAM LINK -->
+  <a class="join-btn"
+     href="https://t.me/+Ku1y4JJKhaw5NGQ1"
+     target="_blank">
+     Join Telegram Channel Now
+  </a>
 
-      window.open(TG_LINK, "_blank");
-    }
+  <div class="footer">
+    © 2025 DEV’S REDDY • Telegram Community
+  </div>
 
-    // Button click
-    const joinBtn = document.getElementById("joinBtn");
-    joinBtn.addEventListener("click", function(){
-      openTelegramWithLead();
-    });
+</div>
 
-    // 10 sec timer auto open
-    let timeLeft = 10;
-    const timerEl = document.getElementById("timer");
+<script>
+const input = document.getElementById("dpInput");
+const img   = document.getElementById("dpImg");
+const text  = document.getElementById("dpText");
 
-    const interval = setInterval(() => {
-      timeLeft--;
-      timerEl.textContent = timeLeft;
+input.addEventListener("change", function(){
+  const file = this.files[0];
+  if(!file) return;
 
-      if(timeLeft <= 0){
-        clearInterval(interval);
-        openTelegramWithLead();
-      }
-    }, 1000);
-  </script>
+  const reader = new FileReader();
+  reader.onload = function(e){
+    img.src = e.target.result;
+    img.style.display="block";
+    text.style.display="none";
+  }
+  reader.readAsDataURL(file);
+});
+</script>
 
 </body>
 </html>
