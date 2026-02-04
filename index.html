@@ -2,223 +2,216 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DEV’S REDDY – VIP Telegram</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEV'S REDDY – VIP Channel</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2643528049355549');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2643528049355549&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
 
 body{
+background:#05070c;
 min-height:100vh;
-background:#000;
 display:flex;
 justify-content:center;
-align-items:flex-start;
+align-items:center;
 color:#fff;
-overflow-x:hidden;
 }
 
-/* moving lines */
-.bg-lines span{
-position:fixed;
-top:-50%;
-width:2px;
-height:200%;
-background:linear-gradient(transparent,rgba(255,215,122,.25),transparent);
-animation:move 5s linear infinite;
-}
-.bg-lines span:nth-child(1){left:12%;}
-.bg-lines span:nth-child(2){left:48%;animation-delay:2s;}
-.bg-lines span:nth-child(3){left:75%;animation-delay:4s;}
-
-@keyframes move{
-0%{transform:translateY(0);}
-100%{transform:translateY(120px);}
-}
-
-.main{
-width:100%;
-max-width:420px;
-padding:22px 16px 40px;
+.card{
+width:92%;
+max-width:380px;
+background:linear-gradient(180deg,#0b1630,#070b17);
+border-radius:22px;
+padding:22px 18px 24px;
+box-shadow:0 0 40px rgba(0,140,255,.25);
 text-align:center;
-position:relative;
-z-index:5;
 }
 
-/* logo */
-.logo-box{
-width:150px;
-height:150px;
-margin:0 auto 12px;
-border-radius:18px;
-overflow:hidden;
-box-shadow:0 0 45px rgba(255,200,90,.7);
+.badges{
+display:flex;
+justify-content:center;
+margin-bottom:12px;
 }
-.logo-box img{
+
+.badge{
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+font-weight:700;
+background:linear-gradient(135deg,#00e676,#00c853);
+color:#001b0a;
+}
+
+.dp-box{
+width:120px;
+height:120px;
+border-radius:50%;
+margin:10px auto 10px;
+border:3px dashed #3fa9ff;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+cursor:pointer;
+animation:pulse 1.5s infinite;
+}
+
+.dp-box img{
 width:100%;
 height:100%;
 object-fit:cover;
+display:none;
 }
 
-/* badges */
-.badges{
-display:flex;
-gap:10px;
-justify-content:center;
-flex-wrap:wrap;
-margin-bottom:12px;
-}
-.badge{
-padding:6px 12px;
-border-radius:20px;
-background:linear-gradient(90deg,#ffd77a,#f7b733);
-color:#000;
-font-weight:bold;
-font-size:12px;
-box-shadow:0 0 15px #ffd77a;
-}
-
-/* title */
-.title{
-margin-top:6px;
-font-size:30px;
-letter-spacing:2px;
-color:#ffd77a;
-text-shadow:0 0 25px #ffd77a;
-}
-
-.sub{
-margin-top:8px;
-font-size:14px;
-color:#ffcc66;
-letter-spacing:1px;
-}
-
-/* main vip button */
-.join-btn{
-margin:20px auto 26px;
-display:inline-block;
-padding:16px 30px;
-border-radius:45px;
-background:linear-gradient(90deg,#ffe08a,#f7b733);
-color:#000;
-font-weight:bold;
-font-size:18px;
-text-decoration:none;
-box-shadow:0 0 35px #ffd77a;
-animation:pulse 1s infinite;
+.dp-text{
+font-size:13px;
+color:#9fd3ff;
 }
 
 @keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);box-shadow:0 0 60px #ffd77a;}
-100%{transform:scale(1);}
+0%{box-shadow:0 0 0 0 rgba(0,162,255,.6);}
+70%{box-shadow:0 0 0 15px rgba(0,162,255,0);}
+100%{box-shadow:0 0 0 0 rgba(0,162,255,0);}
 }
 
-/* card */
-.card{
-background:rgba(255,255,255,.08);
-border-radius:22px;
-padding:22px 18px;
-backdrop-filter:blur(10px);
-box-shadow:0 0 35px rgba(255,215,120,.15);
+h1{
+margin-top:6px;
+font-size:26px;
+letter-spacing:1px;
+color:#ffd76a;
+text-shadow:0 0 15px rgba(255,215,106,.6);
+}
+
+.subtitle{
+margin-top:6px;
+font-size:14px;
+color:#bcdcff;
+}
+
+.features{
 text-align:left;
+margin-top:16px;
+font-size:14px;
+line-height:1.7;
 }
 
-.card p{
-margin:12px 0;
-font-size:15px;
-letter-spacing:.4px;
+.features li{
+list-style:none;
+margin-bottom:6px;
 }
 
-.card p span{
-color:#ffd77a;
-font-weight:bold;
+.features li::before{
+content:"✅ ";
 }
 
-/* bottom vip button */
-.vip-btn{
+.join-btn{
 display:block;
-margin:18px auto 0;
-text-align:center;
-padding:14px 22px;
-border-radius:35px;
-background:linear-gradient(90deg,#ffb347,#ffcc33);
-color:#000;
-font-weight:bold;
+margin-top:18px;
+padding:14px 10px;
+border-radius:14px;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+color:#fff;
+font-weight:800;
 text-decoration:none;
-box-shadow:0 0 25px #ffcc33;
-animation:pulse 1s infinite;
+font-size:16px;
+letter-spacing:.4px;
+animation:blink 1.2s infinite;
+box-shadow:0 0 25px rgba(0,162,255,.7);
+}
+
+@keyframes blink{
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.06);}
 }
 
 .footer{
-margin-top:22px;
+margin-top:12px;
 font-size:12px;
-color:#aaa;
-text-align:center;
+color:#9aaed1;
+}
+
+input[type=file]{
+display:none;
 }
 </style>
 </head>
+
 <body>
 
-<div class="bg-lines">
-  <span></span>
-  <span></span>
-  <span></span>
+<div class="card">
+
+<div class="badges">
+  <span class="badge">✔ Trusted Channel</span>
 </div>
 
-<div class="main">
+<label class="dp-box">
+  <img id="dpPreview">
+  <div class="dp-text" id="dpText">Upload DP</div>
+  <input type="file" accept="image/*" onchange="previewDP(event)">
+</label>
 
-  <div class="logo-box">
-    <img src="logo.png" alt="DEV’S REDDY">
-  </div>
+<h1>DEV'S REDDY 🔥</h1>
 
-  <div class="badges">
-    <div class="badge">⚡ 5G 16</div>
-    <div class="badge">🔥 New Dhamaka Unlock</div>
-    <div class="badge">✅ Trusted Channel</div>
-  </div>
+<div class="subtitle">
+99% High Winning Daily • Sure-shot Trusted Channel
+</div>
 
-  <div class="title">DEV’S REDDY</div>
+<ul class="features">
+<li>New Dhamaka Unlock</li>
+<li>We provide best prediction</li>
+<li>24×7 instant support</li>
+<li>100% safe & secure withdrawal and deposit system</li>
+<li>Trusted VIP channel</li>
+<li>99% high winning daily sureshot trusted channel</li>
+</ul>
 
-  <div class="sub">
-    99% High Winning Daily • Sure-shot Trusted Channel 🔥
-  </div>
+<a class="join-btn"
+   href="https://t.me/+Ku1y4JJKhaw5NGQ1"
+   target="_blank">
+🚀 JOIN VIP CHANNEL
+</a>
 
-  <a class="join-btn" href="https://t.me/+Ku1y4JJKhaw5NGQ1" target="_blank">
-    🚀 JOIN VIP CHANNEL
-  </a>
-
-  <div class="card">
-
-    <p>⚡ <span>We provide best prediction</span></p>
-
-    <p>📞 <span>24×7 instant support</span></p>
-
-    <p>🔐 <span>100% safe & secure withdrawal and deposit system</span></p>
-
-    <p>🔥 <span>Trusted channel – real results</span></p>
-
-    <p>🎯 <span>99% high winning daily sureshot trusted channel</span></p>
-
-    <p>💎 <span>New Dhamaka unlock for VIP members</span></p>
-
-    <a class="vip-btn" href="https://t.me/+Ku1y4JJKhaw5NGQ1" target="_blank">
-      🔥 JOIN VIP CHANNEL
-    </a>
-
-  </div>
-
-  <div class="footer">
-    © 2025 DEV’S REDDY • Telegram Community
-  </div>
+<div class="footer">
+© 2025 DEV'S REDDY • Telegram Community
+</div>
 
 </div>
+
+<script>
+function previewDP(e){
+const file = e.target.files[0];
+if(!file) return;
+
+const reader = new FileReader();
+reader.onload = function(){
+  const img = document.getElementById("dpPreview");
+  const text = document.getElementById("dpText");
+  img.src = reader.result;
+  img.style.display="block";
+  text.style.display="none";
+};
+reader.readAsDataURL(file);
+}
+</script>
 
 </body>
 </html>
