@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>DEV’S REDDY – Official Telegram</title>
+<title>DEV’S REDDY – VIP Telegram</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -23,110 +23,144 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* background light lines */
+/* moving lines */
 .bg-lines span{
 position:fixed;
 top:-50%;
 width:2px;
 height:200%;
-background:linear-gradient(transparent,rgba(255,255,255,.2),transparent);
-animation:move 6s linear infinite;
+background:linear-gradient(transparent,rgba(255,215,122,.25),transparent);
+animation:move 5s linear infinite;
 }
-
-.bg-lines span:nth-child(1){left:15%;animation-delay:0s;}
-.bg-lines span:nth-child(2){left:45%;animation-delay:2s;}
-.bg-lines span:nth-child(3){left:70%;animation-delay:4s;}
+.bg-lines span:nth-child(1){left:12%;}
+.bg-lines span:nth-child(2){left:48%;animation-delay:2s;}
+.bg-lines span:nth-child(3){left:75%;animation-delay:4s;}
 
 @keyframes move{
 0%{transform:translateY(0);}
-100%{transform:translateY(100px);}
+100%{transform:translateY(120px);}
 }
 
 .main{
 width:100%;
 max-width:420px;
-padding:25px 18px 40px;
+padding:22px 16px 40px;
 text-align:center;
 position:relative;
 z-index:5;
 }
 
-/* top logo */
+/* logo */
 .logo-box{
 width:150px;
 height:150px;
-margin:0 auto 10px;
+margin:0 auto 12px;
 border-radius:18px;
 overflow:hidden;
-box-shadow:0 0 40px rgba(160,80,255,.6);
+box-shadow:0 0 45px rgba(255,200,90,.7);
 }
-
 .logo-box img{
 width:100%;
 height:100%;
 object-fit:cover;
 }
 
-/* heading */
+/* badges */
+.badges{
+display:flex;
+gap:10px;
+justify-content:center;
+flex-wrap:wrap;
+margin-bottom:12px;
+}
+.badge{
+padding:6px 12px;
+border-radius:20px;
+background:linear-gradient(90deg,#ffd77a,#f7b733);
+color:#000;
+font-weight:bold;
+font-size:12px;
+box-shadow:0 0 15px #ffd77a;
+}
+
+/* title */
 .title{
-margin-top:10px;
-font-size:32px;
+margin-top:6px;
+font-size:30px;
 letter-spacing:2px;
 color:#ffd77a;
 text-shadow:0 0 25px #ffd77a;
 }
 
 .sub{
-margin-top:10px;
-font-size:15px;
+margin-top:8px;
+font-size:14px;
 color:#ffcc66;
 letter-spacing:1px;
 }
 
-/* join button */
+/* main vip button */
 .join-btn{
-margin:22px auto 28px;
+margin:20px auto 26px;
 display:inline-block;
-padding:15px 28px;
-border-radius:40px;
+padding:16px 30px;
+border-radius:45px;
 background:linear-gradient(90deg,#ffe08a,#f7b733);
 color:#000;
 font-weight:bold;
 font-size:18px;
 text-decoration:none;
-box-shadow:0 0 30px #f7c44b;
+box-shadow:0 0 35px #ffd77a;
 animation:pulse 1s infinite;
 }
 
 @keyframes pulse{
 0%{transform:scale(1);}
-50%{transform:scale(1.08);box-shadow:0 0 50px #ffd77a;}
+50%{transform:scale(1.1);box-shadow:0 0 60px #ffd77a;}
 100%{transform:scale(1);}
 }
 
-/* info card */
+/* card */
 .card{
 background:rgba(255,255,255,.08);
 border-radius:22px;
 padding:22px 18px;
-backdrop-filter:blur(8px);
-box-shadow:0 0 30px rgba(255,255,255,.1);
+backdrop-filter:blur(10px);
+box-shadow:0 0 35px rgba(255,215,120,.15);
+text-align:left;
 }
 
 .card p{
 margin:12px 0;
-font-size:16px;
+font-size:15px;
 letter-spacing:.4px;
 }
 
-.card span{
+.card p span{
 color:#ffd77a;
+font-weight:bold;
+}
+
+/* bottom vip button */
+.vip-btn{
+display:block;
+margin:18px auto 0;
+text-align:center;
+padding:14px 22px;
+border-radius:35px;
+background:linear-gradient(90deg,#ffb347,#ffcc33);
+color:#000;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 0 25px #ffcc33;
+animation:pulse 1s infinite;
 }
 
 .footer{
 margin-top:22px;
 font-size:12px;
 color:#aaa;
+text-align:center;
 }
 </style>
 </head>
@@ -140,31 +174,43 @@ color:#aaa;
 
 <div class="main">
 
-  <!-- LOGO / DP -->
   <div class="logo-box">
-    <!-- apni image ka naam yaha rakho -->
-    <img src="logo.png" alt="DEV'S REDDY">
+    <img src="logo.png" alt="DEV’S REDDY">
+  </div>
+
+  <div class="badges">
+    <div class="badge">⚡ 5G 16</div>
+    <div class="badge">🔥 New Dhamaka Unlock</div>
+    <div class="badge">✅ Trusted Channel</div>
   </div>
 
   <div class="title">DEV’S REDDY</div>
 
   <div class="sub">
-    INDIA’S PREMIUM PRIVATE TELEGRAM CHANNEL 🔥
+    99% High Winning Daily • Sure-shot Trusted Channel 🔥
   </div>
 
   <a class="join-btn" href="https://t.me/+Ku1y4JJKhaw5NGQ1" target="_blank">
-    🚀 JOIN TELEGRAM FREE
+    🚀 JOIN VIP CHANNEL
   </a>
 
   <div class="card">
 
-    <p>🔥 <span>High accuracy daily predictions</span></p>
+    <p>⚡ <span>We provide best prediction</span></p>
 
-    <p>✨ <span>Fast updates & premium analysis</span></p>
+    <p>📞 <span>24×7 instant support</span></p>
 
-    <p>✨ <span>Free signals for community members</span></p>
+    <p>🔐 <span>100% safe & secure withdrawal and deposit system</span></p>
 
-    <p>✨ <span>Personal guidance & support</span></p>
+    <p>🔥 <span>Trusted channel – real results</span></p>
+
+    <p>🎯 <span>99% high winning daily sureshot trusted channel</span></p>
+
+    <p>💎 <span>New Dhamaka unlock for VIP members</span></p>
+
+    <a class="vip-btn" href="https://t.me/+Ku1y4JJKhaw5NGQ1" target="_blank">
+      🔥 JOIN VIP CHANNEL
+    </a>
 
   </div>
 
