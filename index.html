@@ -1,142 +1,184 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEV'S REDDY | Trusted Panel</title>
+<meta charset="UTF-8">
+<title>DEV'S REDDY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2643528049355549');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2643528049355549&ev=PageView&noscript=1"
-    /></noscript>
-    <style>
-        body {
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2643528049355549');
+fbq('track', 'PageView');
+</script>
 
-        /* Profile Image Container */
-        .profile-container {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 2px dashed #3b82f6; 
-            padding: 6px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
 
-        .profile-container img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+body{
+background:#000;
+color:#fff;
+min-height:100vh;
+overflow-x:hidden;
+display:flex;
+justify-content:center;
+}
 
-        /* Trusted Badge */
-        .badge {
-            background-color: #0084ff;
-            color: white;
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(0, 132, 255, 0.3);
-        }
+.main{
+width:100%;
+max-width:420px;
+padding:30px 16px 50px;
+position:relative;
+z-index:2;
+text-align:center;
+}
 
-        /* Glow Text for Name */
-        h1 {
-            font-size: 32px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #7dd3fc;
-            text-shadow: 0 0 15px rgba(125, 211, 252, 0.6);
-            margin: 10px 0;
-            font-weight: 800;
-        }
+/* rain lines */
+.rain{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:1;
+background:
+linear-gradient(transparent 0%,rgba(255,255,255,.12) 50%,transparent 100%);
+background-size:2px 120px;
+animation:rain 0.6s linear infinite;
+opacity:.35;
+}
+@keyframes rain{
+from{background-position:0 0;}
+to{background-position:0 120px;}
+}
 
-        /* Buttons Style */
-        .btn-group {
-            width: 100%;
-            max-width: 360px;
-            margin-top: 25px;
-        }
+/* logo */
+.logo{
+width:160px;
+height:160px;
+border-radius:18px;
+object-fit:cover;
+box-shadow:0 0 25px rgba(180,120,255,.6);
+margin:auto;
+display:block;
+}
 
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            margin: 12px 0;
-            text-align: center;
-            text-decoration: none;
-            color: white;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
+/* title */
+.title{
+margin-top:18px;
+font-size:32px;
+font-weight:900;
+letter-spacing:2px;
+color:#ffd978;
+text-shadow:0 0 18px #ffcc55;
+}
 
-        .btn:hover {
-            background: #3b82f6;
-            border-color: #3b82f6;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
-        }
+.sub{
+margin-top:8px;
+font-size:15px;
+color:#ffd978;
+letter-spacing:1px;
+}
 
-        .fire-emoji {
-            color: #ff4500;
-        }
-    </style>
+.join-now{
+margin:12px 0 22px;
+font-size:16px;
+color:#fff;
+}
+
+/* big button */
+.join-btn{
+display:inline-block;
+margin-top:10px;
+padding:15px 26px;
+border-radius:30px;
+background:linear-gradient(90deg,#ffe28a,#ffc94d);
+color:#000;
+font-weight:900;
+text-decoration:none;
+box-shadow:0 0 25px #ffd86b;
+animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 10px #ffd86b;}
+50%{box-shadow:0 0 35px #ffd86b;}
+100%{box-shadow:0 0 10px #ffd86b;}
+}
+
+/* glass card */
+.card{
+margin-top:30px;
+background:rgba(255,255,255,.08);
+border-radius:22px;
+padding:22px 18px;
+backdrop-filter:blur(8px);
+box-shadow:0 0 30px rgba(255,255,255,.08);
+}
+
+.card p{
+font-size:16px;
+margin:14px 0;
+letter-spacing:.5px;
+}
+
+.card span{
+color:#ffd978;
+font-weight:bold;
+}
+
+.footer{
+margin-top:24px;
+font-size:12px;
+color:#aaa;
+}
+
+</style>
 </head>
 <body>
 
-    <div class="profile-container">
-        <img src="https://via.placeholder.com/150" alt="Dev Reddy">
-    </div>
+<div class="rain"></div>
 
-    <div class="badge">
-        <span style="font-size: 16px;">✓</span> Trusted Channel
-    </div>
+<div class="main">
 
-    <h1>DEV'S REDDY <span class="fire-emoji">🔥</span></h1>
+<!-- yaha apni image ka naam dalna -->
+<img src="logo.png" class="logo">
 
-    <div class="btn-group">
-        <a href="#" class="btn">Join Telegram Channel</a>
-        <a href="#" class="btn">Instant Follower Panel</a>
-        <a href="#" class="btn">Contact Support</a>
-    </div>
+<div class="title">DEV'S REDDY</div>
 
-    <p style="margin-top: 30px; font-size: 12px; color: #64748b; opacity: 0.7;">
-        Verified Secure Page
-    </p>
+<div class="sub">INDIA'S BEST COLOR TRADING TIPPER 🔥</div>
+
+<div class="join-now">🔥 JOIN TELEGRAM NOW 🔥</div>
+
+<a class="join-btn" href="https://t.me/+Ku1y4JJKhaw5NGQ1" target="_blank">
+🚀 JOIN TELEGRAM FREE
+</a>
+
+<div class="card">
+
+<p>🔥 <span>RECOVERY ALL LOSS IN 1 DAYS</span></p>
+
+<p>✨ <span>F99% ACCOUNT PREDICTION</span></p>
+
+<p>✨ <span>DALL NUMBER HACK FREE</span> ✨</p>
+
+<p>✨ <span>F100% PRESNOL LOSS RECOVERY</span> ✨</p>
+
+</div>
+
+<div class="footer">
+© 2025 DEV'S REDDY • Telegram Community
+</div>
+
+</div>
 
 </body>
 </html>
